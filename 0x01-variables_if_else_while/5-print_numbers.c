@@ -1,16 +1,17 @@
 #include <stdio.h>
+
 /**
- * main - entry point
+ * main - Function to print number base 10
  *
- * return: always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n;
+	int i;
 
-	for (n = 0; n < 10; n++)
+	for (i = 0; i < 10; i++)
 	{
-		printf("%d", n);
+		printf("%d", i);
 	}
 	putchar('\n');
 	return (0);
