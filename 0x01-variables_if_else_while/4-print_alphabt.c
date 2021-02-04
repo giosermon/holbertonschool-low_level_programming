@@ -1,17 +1,21 @@
 #include <stdio.h>
+
 /**
-* main -entry point
-*
-* return: always 0 (success)
-*/
+ * main - Function to print The alphabet without e and q
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-char alphabt;
-for (alphabt = 'a'; alphabt <= 'z'; alphabt++)
-{
-if (!(alphabt == 'q' || alphabt == 'e'))
-putchar(alphabt);
-}
-putchar('\n');
-return (0);
+	char c;
+
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		if (c != 'e' && c != 'q')
+		{
+			putchar (c);
+		}
+	}
+	putchar('\n');
+	return (0);
 }
