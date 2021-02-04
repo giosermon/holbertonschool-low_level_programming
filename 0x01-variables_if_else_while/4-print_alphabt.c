@@ -10,7 +10,7 @@ int main(void)
 
         for (alphabt = 'a'; alphabt <= 'z'; alphabt++)
         {
-                if(!(alphabt == 'q' || alphabt == 'e'))
+                if (alphabt != 'q' && alphabt != 'e')
                     putchar(alphabt);
         } 
         putchar('\n');
