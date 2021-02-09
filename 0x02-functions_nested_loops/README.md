@@ -1,0 +1,1 @@
+A function is a group pf statements that together a task.Everty C ŕpgram has at least one function, which is main(), and all the most trival programs can difene additional functions.
