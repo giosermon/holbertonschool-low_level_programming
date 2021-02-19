@@ -1,35 +1,47 @@
 #include "holberton.h"
 
 /**
- * cap_string - function reverses the content of an array of integers.
+ * leet - function that encodes a string into 1337.
  * @a: Pointer to array
  *
- * Return: Array with capitalize every strings.
+ * Return: Array with string encode into 1337.
  */
-char *cap_string(char *a)
+char *leet(char *a)
 {
-	int i, j, k;
-	char b[13] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+	int i, j;
+	char encode[10] = {'4', '3', '0', '7', '1', '4', '3', '0', '7', '1'};
+	char ch[10] = {'a', 'e', 'o', 't', 'l', 'A', 'E', 'O', 'T', 'L'};
 
-	i = 0;
-	while (a[i] != '\0')
+	for (i = 0 ; a[i] != '\0' ; i++)
 	{
-		i++;
-	}
-	for (j = 0 ; j < i ; j++)
-	{
-		if (a[j] > 96 && a[j] < 123)
+		for (j = 0 ; j <= 10 ; j++)
 		{
-			for (k = 0; k < 13; k++)
-			{
-				if (a[j - 1] == b[k])
-				{
-					a[j] = a[j] - 32;
-				}
-			}
+			if (a[i] == ch[j])
+				a[i] = encode[j];
 		}
 	}
-	if (a[0] > 96 && a[0] < 123)
-		a[0] = a[0] - 32;
+	return (a);
+}#include "holberton.h"
+
+/**
+ * leet - function that encodes a string into 1337.
+ * @a: Pointer to array
+ *
+ * Return: Array with string encode into 1337.
+ */
+char *leet(char *a)
+{
+	int i, j;
+	char encode[10] = {'4', '3', '0', '7', '1', '4', '3', '0', '7', '1'};
+	char ch[10] = {'a', 'e', 'o', 't', 'l', 'A', 'E', 'O', 'T', 'L'};
+
+	for (i = 0 ; a[i] != '\0' ; i++)
+	{
+		for (j = 0 ; j <= 10 ; j++)
+		{
+			if (a[i] == ch[j])
+				a[i] = encode[j];
+		}
+	}
 	return (a);
 }
