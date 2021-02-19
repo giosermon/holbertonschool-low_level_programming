@@ -1,47 +1,27 @@
 #include "holberton.h"
 
 /**
- * leet - function that encodes a string into 1337.
- * @a: Pointer to array
+ * leet - Function that reverses the content of an array of integers.
  *
- * Return: Array with string encode into 1337.
+ * @str: s is the array
+ *
+ * Return: Always 0.
  */
-char *leet(char *a)
+char *leet(char *str)
 {
-	int i, j;
-	char encode[10] = {'4', '3', '0', '7', '1', '4', '3', '0', '7', '1'};
-	char ch[10] = {'a', 'e', 'o', 't', 'l', 'A', 'E', 'O', 'T', 'L'};
+	int i = 0, k;
+	char s[] = "aAeEoOtTlL";
+	char s1[] = "4433007711";
 
-	for (i = 0 ; a[i] != '\0' ; i++)
+	for (; str[i] != '\0'; i++)
 	{
-		for (j = 0 ; j <= 10 ; j++)
+		for (k = 0; k <= 9; k++)
 		{
-			if (a[i] == ch[j])
-				a[i] = encode[j];
+			if (s[k] == str[i])
+			{
+				str[i] = s1[k];
+			}
 		}
 	}
-	return (a);
-}#include "holberton.h"
-
-/**
- * leet - function that encodes a string into 1337.
- * @a: Pointer to array
- *
- * Return: Array with string encode into 1337.
- */
-char *leet(char *a)
-{
-	int i, j;
-	char encode[10] = {'4', '3', '0', '7', '1', '4', '3', '0', '7', '1'};
-	char ch[10] = {'a', 'e', 'o', 't', 'l', 'A', 'E', 'O', 'T', 'L'};
-
-	for (i = 0 ; a[i] != '\0' ; i++)
-	{
-		for (j = 0 ; j <= 10 ; j++)
-		{
-			if (a[i] == ch[j])
-				a[i] = encode[j];
-		}
-	}
-	return (a);
+	return (str);
 }
