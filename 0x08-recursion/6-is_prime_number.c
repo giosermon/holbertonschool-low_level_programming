@@ -1,43 +1,47 @@
 #include "holberton.h"
 
 /**
- * is_prime_number - function..
- * @n: number
- * Return: Always 0.
+ * prime - Function to evaluate is a number is prime.
+ *
+ * @i: numbers before n to divide.
+ * @num: number to evaluate.
+ *
+ * Return: Give 1 for a prime number. 0 for not a prime.
+ *
  */
+int prime(int i, int num)
+{
+	/*Base case*/
+	if (i < num)
+	{
+		if (num % i == 0)
+		{
+			return (0);
+		}
+	}
+	if (num == i)
+	{
+		return (1);
+	}
+	else
+	{
+		return (prime(i + 1, num));
+	}
+}
 
+
+/**
+ * is_prime_number - function that said is a prime number.
+ * @n: number to evaluate
+ *
+ * Return: 0 is not prime. 1 is prime.
+ */
 int is_prime_number(int n)
 {
-int resultado = 0;
-
-if (n < 2)
-{
-return (0);
-}
-if (n == 2)
-{
-return (1);
-}
-resultado = primo(n, 2);
-return (resultado);
-}
-/**
- * primo - operation function.
- * @n: number
- * @i: iterator
- * Return: Always 0.
- */
-
-int primo(int n, int i)
-{
-if (n % i == 0)
-{
-return (0);
-}
-if (i < n / 2)
-{
-return (primo(n, i + 1));
-}
-
-return (1);
+	/* base case */
+	if (n <= 1)
+	{
+		return (0);
+	}
+	return (prime(2, n));
 }
