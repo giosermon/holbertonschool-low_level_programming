@@ -27,7 +27,7 @@ int pal(int i, int len, char *s)
 	return (1);
 }
 /**
- * lenght  Function for calculate lenght of the string.
+ * lenght - Function for calculate lenght of the string.
  *
  * @s: String to evaluate.
  *
@@ -43,7 +43,7 @@ int lenght(char *s)
 	return (0);
 }
 /**
- * is_palindrome Function to evaluate is a palindrome.
+ * is_palindrome - Function to evaluate is a palindrome.
  *
  * @s: String to evaluate is a palindrome word.
  *
