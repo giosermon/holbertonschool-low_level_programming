@@ -9,6 +9,6 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	assert(name != NULL && f != NULL);
+	assert(name && f);
 		(*f)(name);
 }
