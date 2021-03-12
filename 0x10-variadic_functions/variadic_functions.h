@@ -1,28 +1,37 @@
-#ifndef _VARIADIC_FUNCTIONS_H_
-#define _VARIADIC_FUNCTIONS_H_
-#include <stdio.h>
+#ifndef __FILE_H_
+#define __FILE_H_
+
 #include <stdarg.h>
+#include <stdio.h>
 
-void pchar(va_list charl);
-void pint(va_list charl);
-void pfloat(va_list charl);
-void pstring(va_list charl);
-
-/**
- * struct toy - check all
- * @argu: argumentos
- * @func: puntero a la funcion
- */
-
-typedef struct toy
-{
-char *argu;
-void (*func)(va_list);
-} toy;
-
+/*Function that returns the sum of all its parameters*/
 int sum_them_all(const unsigned int n, ...);
+
+/*Function that prints numbers*/
 void print_numbers(const char *separator, const unsigned int n, ...);
+
+/*Function that prints a string*/
 void print_strings(const char *separator, const unsigned int n, ...);
+
+/*Function that prints anything*/
 void print_all(const char * const format, ...);
 
-#endif
+/**
+ * struct format_s - Struct type for type and function asociated
+ *
+ * @type: type to evaluate
+ * @f: The function associated
+ */
+typedef struct format_s
+{
+	char type;
+	void (*f)();
+} format_t;
+
+
+void printf_char(va_list a);
+void printf_int(va_list a);
+void printf_float(va_list a);
+void printf_string(va_list a);
+
+#endif /*FILE_H*/
