@@ -37,4 +37,6 @@ list_t *add_node_end(list_t **head, const char *str);
 /*Function that frees a list_t list*/
 void free_list(list_t *head);
 
+void print_before_main(void);
+
 #endif /*FILE_H*/
