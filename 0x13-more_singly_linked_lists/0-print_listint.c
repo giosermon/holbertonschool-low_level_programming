@@ -3,20 +3,20 @@
 /**
  * print_listint - main function
  * @h: Pointer to the string.
- *
+ * 
  * Description: This function prints all the elements of a listint_t list.
- *
+ * 
  * Return: The number of nodes.
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t i = 0;
+	int i;
+	const listint_t *nodo = h;
 
-	while (h)
+	for (i = 0; nodo != NULL; i++)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
-		i++;
+		printf("%d\n", nodo->n);
+		nodo = nodo->next;
 	}
 	return (i);
 }
