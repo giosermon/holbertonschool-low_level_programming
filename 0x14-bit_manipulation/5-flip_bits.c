@@ -8,9 +8,6 @@
  * @m: number 2;
  * Return: thenumber of buts needed to flip
  */
-
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
-{
 	unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int count = 0;
