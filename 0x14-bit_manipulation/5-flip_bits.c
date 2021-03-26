@@ -11,20 +11,16 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int me;
-	unsigned int s;
+	unsigned int flip_bits(unsigned long int n, unsigned long int m)
+{
+	unsigned long int count = 0;
+	unsigned long int num;
 
-	s = 0;
-	me = 1;
-	while (me < 2147483648)
+	num = n ^ m;
+	while (num > 0)
 	{
-	if (s == index)
-	{
-		*n = *n & ~(1 << index);
-		return (1);
+		count += (1 & num);
+		num >>= 1;
 	}
-		s++;
-		me = me << 1;
-	}
-	return (-1);
+	return (count);
 }
