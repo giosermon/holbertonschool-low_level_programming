@@ -9,8 +9,21 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	if (index >= 64)
-		return (-1);
-	*n &= ~(1 << index);
+	unsigned long int me;
+	unsigned int s;
+
+	s = 0;
+	me = 1;
+	while (me < 2147483648)
+	{
+	if (s == index)
+	{
+		*n = *n & ~(1 << index);
 	return (1);
+	}
+		s++;
+		me = me << 1;
+	}
+	return (-1);
 }
+
