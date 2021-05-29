@@ -6,22 +6,22 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned int long i;
-	hash_node_t *tmp;
+	unsigned long int i;
+	char *tmp = "";
 
 	if (ht == NULL)
-		return;
-	i = 0;
-	printf("%c", '{');
-	while (i < ht->size)
 	{
-		tmp = ht->array[i];
-		while (tmp != NULL)
-		{
-			printf("'%s': '%s' , ", tmp->key, tmp->value);
-			tmp = tmp->next;
-		}
-		i++;
+		return;
 	}
-	printf("%c\n", '}');
+	printf("{");
+	for (i = 0; i < ht->size; i++)
+	{
+		while (ht->array[i])
+		{
+			printf("%s'%s': '%s'", tmp, (ht->array[i])->key, (ht->array[i])->value);
+			tmp = ", ";
+			ht->array[i] = (ht->array[i])->next;
+		}
+	}
+	printf("}\n");
 }
